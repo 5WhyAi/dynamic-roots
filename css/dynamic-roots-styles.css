@@ -240,6 +240,7 @@ footer .social-links a {
 
   .cta form {
     flex-direction: column;
+    text-align: center;
   }
   /* Header Style */
 header {
@@ -266,40 +267,49 @@ header .logo img {
 
 /* Updated Hero Section */
 .hero {
-  background: url('../images/mascot-try3.jpeg') no-repeat center center/cover;
+  background-color: var(--color-primary); /* Primary color background */
   color: white;
-  height: 500px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   text-align: center;
+  padding: var(--spacing-large);
 }
 
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* White overlay */
-  z-index: 0;
+.hero-container {
+  background-color: white;
+  color: var(--color-text);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
+.hero-container h1 {
+  font-size: 2.5rem;
   font-weight: bold;
-  z-index: 1;
+  margin-bottom: var(--spacing-medium);
 }
 
-.hero h1 span {
-  color: var(--color-accent); /* Accent color for emphasis */
-}
-
-.hero p {
+.hero-container p {
   font-size: 1.25rem;
-  margin-top: 20px;
-  z-index: 1;
-  color: var(--color-accent);
+  margin-bottom: var(--spacing-medium);
+  color: var(--color-text);
+}
+
+.hero-container .btn-primary {
+  padding: var(--spacing-small) var(--spacing-medium);
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.hero-container .btn-primary:hover {
+  background-color: var(--color-accent);
 }
