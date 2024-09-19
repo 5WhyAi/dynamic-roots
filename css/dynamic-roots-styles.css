@@ -236,13 +236,13 @@ footer .social-links a {
     width: 100%;
     margin-bottom: var(--spacing-small);
   }
-}
 
   .cta form {
     flex-direction: column;
     text-align: center;
   }
 }
+
   /* Header Style */
 header {
   background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); /* Use gradient */
@@ -288,6 +288,7 @@ header .logo img {
   margin: 0 auto;
 }
 
+/* Hero Container Styles */
 .hero-container h1 {
   font-size: 2.5rem;
   font-weight: bold;
