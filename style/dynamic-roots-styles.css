@@ -1,0 +1,240 @@
+/* CSS Document */
+/* Montserrat Styles */
+:root {
+    -color-primary: #0D9488;
+    -color-secondary: #5EEAD4;
+    -color-accent: #86efac;
+    -color-neutral: #8B4513;
+    -color-background: #FFFFFF;
+    -color-text: #333333;
+    -color-highlight: #FF6B6B; /* New highlight color */
+
+    -font-primary: 'Roboto', Arial, sans-serif;
+    -font-secondary: 'Georgia', serif;
+
+    -spacing-small: 0.5rem;
+    -spacing-medium: 1rem;
+    -spacing-large: 2rem;
+
+    -border-radius: 4px;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-bottom: var(--spacing-medium);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+.hero {
+  background: url('court.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-background);
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  z-index: 1;
+}
+
+.section {
+  padding: var(--spacing-large) 0;
+}
+
+.visual {
+  padding: var(--spacing-medium);
+  background-color: var(--color-background);
+  margin: var(--spacing-medium) 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.visual h3 {
+  color: var(--color-primary);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-medium) 0;
+}
+
+th, td {
+  padding: var(--spacing-small);
+  border: 1px solid var(--color-secondary);
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.cta {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding: var(--spacing-large) 0;
+  text-align: center;
+}
+
+.cta h2 {
+  color: var(--color-background);
+}
+
+.cta form {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-small);
+}
+
+.cta input[type="email"] {
+  width: 40%;
+  padding: var(--spacing-small);
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--spacing-small) var(--spacing-medium);
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-highlight);
+}
+
+.statistics {
+  background-color: var(--color-secondary);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-medium) 0;
+}
+
+.highlight {
+  color: var(--color-highlight);
+  font-weight: bold;
+}
+
+.card {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-medium);
+}
+
+.card-header {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.card-body {
+  padding: var(--spacing-medium);
+}
+
+footer {
+  background-color: var(--color-neutral);
+  color: var(--color-background);
+  text-align: center;
+  padding: var(--spacing-medium) 0;
+}
+
+footer a {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cta input[type="email"] {
+    width: 100%;
+    margin-bottom: var(--spacing-small);
+  }
+
+  .cta form {
+    flex-direction: column;
+  }
+}

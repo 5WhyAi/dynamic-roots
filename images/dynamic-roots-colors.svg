@@ -1,0 +1,58 @@
+<svg width="1300" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: Arial, sans-serif; font-size: 24px; fill: #333; }
+    .color-name { font-size: 14px; text-anchor: middle; }
+  </style>
+  
+  <!-- Palette 1: Tropical Vibes -->
+  <text x="50" y="40">Palette 1: Tropical Vibes</text>
+  <circle cx="150" cy="150" r="100" fill="#FFD700" stroke="#FFF8DC" stroke-width="20"/>
+  <text x="150" y="270" class="color-name">Sunshine Yellow</text>
+  <circle cx="400" cy="150" r="100" fill="#FF6F61" stroke="#FFD1C4" stroke-width="20"/>
+  <text x="400" y="270" class="color-name">Coral Pink</text>
+  <circle cx="650" cy="150" r="100" fill="#00CED1" stroke="#E0FFFF" stroke-width="20"/>
+  <text x="650" y="270" class="color-name">Ocean Blue</text>
+  <circle cx="900" cy="150" r="100" fill="#32CD32" stroke="#DFFFDF" stroke-width="20"/>
+  <text x="900" y="270" class="color-name">Lime Green</text>
+  <circle cx="1150" cy="150" r="100" fill="#FF8C00" stroke="#FFE4B5" stroke-width="20"/>
+  <text x="1150" y="270" class="color-name">Tangerine</text>
+  
+  <!-- Palette 2: Spring Bloom -->
+  <text x="50" y="340">Palette 2: Spring Bloom</text>
+  <circle cx="150" cy="450" r="100" fill="#FFB6C1" stroke="#FFE4E1" stroke-width="20"/>
+  <text x="150" y="570" class="color-name">Cherry Blossom</text>
+  <circle cx="400" cy="450" r="100" fill="#98FF98" stroke="#F0FFF0" stroke-width="20"/>
+  <text x="400" y="570" class="color-name">Mint Green</text>
+  <circle cx="650" cy="450" r="100" fill="#87CEEB" stroke="#E0FFFF" stroke-width="20"/>
+  <text x="650" y="570" class="color-name">Sky Blue</text>
+  <circle cx="900" cy="450" r="100" fill="#E6E6FA" stroke="#F8F8FF" stroke-width="20"/>
+  <text x="900" y="570" class="color-name">Lavender</text>
+  <circle cx="1150" cy="450" r="100" fill="#FFD700" stroke="#FFFACD" stroke-width="20"/>
+  <text x="1150" y="570" class="color-name">Sunflower</text>
+  
+  <!-- Palette 3: Candy Land -->
+  <text x="50" y="640">Palette 3: Candy Land</text>
+  <circle cx="150" cy="750" r="100" fill="#FF69B4" stroke="#FFD6E7" stroke-width="20"/>
+  <text x="150" y="870" class="color-name">Bubblegum Pink</text>
+  <circle cx="400" cy="750" r="100" fill="#7DF9FF" stroke="#E0FFFF" stroke-width="20"/>
+  <text x="400" y="870" class="color-name">Electric Blue</text>
+  <circle cx="650" cy="750" r="100" fill="#FFF44F" stroke="#FFFFE0" stroke-width="20"/>
+  <text x="650" y="870" class="color-name">Lemonade</text>
+  <circle cx="900" cy="750" r="100" fill="#98FF98" stroke="#F0FFF0" stroke-width="20"/>
+  <text x="900" y="870" class="color-name">Minty Fresh</text>
+  <circle cx="1150" cy="750" r="100" fill="#FFA500" stroke="#FFEFD5" stroke-width="20"/>
+  <text x="1150" y="870" class="color-name">Orange Sherbet</text>
+  
+  <!-- Palette 4: Festive Fiesta -->
+  <text x="50" y="940">Palette 4: Festive Fiesta</text>
+  <circle cx="150" cy="1050" r="100" fill="#DC143C" stroke="#FADADD" stroke-width="20"/>
+  <text x="150" y="1170" class="color-name">Crimson Red</text>
+  <circle cx="400" cy="1050" r="100" fill="#FF4500" stroke="#FFDAB9" stroke-width="20"/>
+  <text x="400" y="1170" class="color-name">Bright Orange</text>
+  <circle cx="650" cy="1050" r="100" fill="#FFFF31" stroke="#FFFFE0" stroke-width="20"/>
+  <text x="650" y="1170" class="color-name">Daffodil Yellow</text>
+  <circle cx="900" cy="1050" r="100" fill="#DFFF00" stroke="#F5FFFA" stroke-width="20"/>
+  <text x="900" y="1170" class="color-name">Lime Punch</text>
+  <circle cx="1150" cy="1050" r="100" fill="#40E0D0" stroke="#E0FFFF" stroke-width="20"/>
+  <text x="1150" y="1170" class="color-name">Turquoise</text>
+</svg>
