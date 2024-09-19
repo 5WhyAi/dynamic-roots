@@ -70,7 +70,7 @@ a:hover {
 }
 
 .hero {
-  background: url('court.jpg') no-repeat center center/cover;
+  background: url('../style/court.jpg') no-repeat center center/cover;
   height: 400px;
   display: flex;
   justify-content: center;
