@@ -262,6 +262,7 @@ footer .social-links a {
     width: 100%;
     margin-bottom: var(--spacing-small);
   }
+}
 
   .cta form {
     flex-direction: column;
@@ -291,7 +292,7 @@ header .logo img {
 
 /* Updated Hero Section */
 .hero {
-  background: url('../style/court.jpg') no-repeat center center/cover;
+  background: url('../images/mascot-try3.jpeg') no-repeat center center/cover;
   color: white;
   height: 500px;
   display: flex;
@@ -329,4 +330,3 @@ header .logo img {
   color: var(--color-accent);
 }
 
-}
