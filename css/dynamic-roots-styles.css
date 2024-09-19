@@ -242,6 +242,7 @@ footer .social-links a {
     flex-direction: column;
     text-align: center;
   }
+}
   /* Header Style */
 header {
   background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); /* Use gradient */
