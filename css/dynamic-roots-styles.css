@@ -244,4 +244,67 @@ footer a {
   .cta form {
     flex-direction: column;
   }
+  /* Header Style */
+header {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); /* Use gradient */
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  width: 140px;
+  vertical-align: middle;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+/* Updated Hero Section */
+.hero {
+  background: url('../style/court.jpg') no-repeat center center/cover;
+  color: white;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.hero h1 span {
+  color: var(--color-accent); /* Accent color for emphasis */
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  z-index: 1;
+  color: var(--color-accent);
+}
+
 }
