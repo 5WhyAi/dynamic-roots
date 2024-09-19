@@ -1,6 +1,7 @@
 /* CSS Document */
 /* Montserrat Styles */
 :root {
+    /* Color Variables */
     --color-primary: #0D9488;
     --color-secondary: #5EEAD4;
     --color-accent: #86efac;
@@ -10,13 +11,16 @@
     --color-text: #333333;
     --color-highlight: #FF6B6B; /* New highlight color */
 
+    /* Font Variables */
     --font-primary: 'Roboto', Arial, sans-serif;
     --font-secondary: 'Georgia', serif;
 
+    /* Spacing Variables */
     --spacing-small: 0.5rem;
     --spacing-medium: 1rem;
     --spacing-large: 2rem;
 
+    /* Border Radius */
     --border-radius: 4px;
 }
 
@@ -99,6 +103,8 @@ a:hover {
   padding: var(--spacing-medium);
   background-color: var(--color-background);
   margin: var(--spacing-medium) 0;
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
   border-radius: var(--border-radius);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
