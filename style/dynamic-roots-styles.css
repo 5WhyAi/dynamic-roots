@@ -5,7 +5,8 @@
     -color-secondary: #5EEAD4;
     -color-accent: #86efac;
     -color-neutral: #8B4513;
-    -color-background: #FFFFFF;
+    --color-background: #FFFFFF;
+    background: var(--color-background);
     -color-text: #333333;
     -color-highlight: #FF6B6B; /* New highlight color */
 
