@@ -204,6 +204,7 @@ th {
   padding: var(--spacing-medium);
 }
 
+/* Footer Styles */
 footer {
   background-color: var(--color-neutral);
   color: var(--color-background);
@@ -211,8 +212,29 @@ footer {
   padding: var(--spacing-medium) 0;
 }
 
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium); /* Ensure padding inside the container */
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
 footer a {
   color: var(--color-secondary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--color-accent);
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
