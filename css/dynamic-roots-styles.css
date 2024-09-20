@@ -1,26 +1,26 @@
 /* Root Variables */
 :root {
   /* Color Variables */
-  --color-primary: #0D9488;
-  --color-secondary: #5EEAD4;
-  --color-accent: #86efac;
-  --color-neutral: #8B4513;
-  --color-background: #FFFFFF;
-  --background: var(--color-background);
-  --color-text: #333333;
-  --color-highlight: #FF6B6B; /* Highlight color */
+  -- color-primary: #0D9488;
+  -- color-secondary: #5EEAD4;
+  -- color-accent: #86efac;
+  -- color-neutral: #8B4513;
+  -- color-background: #FFFFFF;
+  -- background: var(--color-background);
+  -- color-text: #333333;
+  -- color-highlight: #FF6B6B; /* Highlight color */
 
   /* Font Variables */
-  --font-primary: 'Roboto', Arial, sans-serif; /* Import Roboto or Montserrat */
-  --font-secondary: 'Georgia', serif;
+  -- font-primary: 'Roboto', Arial, sans-serif; /* Import Roboto or Montserrat */
+  -- font-secondary: 'Georgia', serif;
 
   /* Spacing Variables */
-  --spacing-small: 0.5rem;
-  --spacing-medium: 1rem;
-  --spacing-large: 2rem;
+  -- spacing-small: 0.5rem;
+  -- spacing-medium: 1rem;
+  -- spacing-large: 2rem;
 
   /* Border Radius */
-  --border-radius: 4px;
+  -- border-radius: 4px;
 }
 
 /* Global Styles */
