@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Universal Memory Stack AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00ffff;
+            --secondary-color: #1a1a40;
+            --bg-color: #0a0a23;
+            --text-color: #d1d1e0;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styling */
+        header {
+            background-color: var(--secondary-color);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            background-color: rgba(26, 26, 64, 0.9);
+            box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a40, #0d0d2b);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('path/to/tech-pattern.png') repeat;
+            opacity: 0.1;
+            animation: backgroundScroll 20s linear infinite;
+        }
+        
+        @keyframes backgroundScroll {
+            from { background-position: 0 0; }
+            to { background-position: 100% 100%; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .cta {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .cta:hover {
+            background-color: #00bfbf;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: #12123b;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(26, 26, 64, 0.5);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+        }
+        
+        .feature-item img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .feature-item p {
+            font-size: 1rem;
+            color: #b3b3cc;
+        }
+        
+        /* Mascot Section */
+        .mascot {
+            padding: 80px 0;
+            background-color: #0d0d2b;
+        }
+        
+        .mascot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .mascot-item {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(26, 26, 64, 0.5);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .mascot-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+        }
+        
+        .mascot-item img {
+            width: 150px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .mascot-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .mascot-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .mascot-item p {
+            margin-bottom: 15px;
+        }
+        
+        /* Footer Section */
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--text-color);
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .features-grid, .mascot-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-links {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="graphics/Monica_Monica_2024-09-19_20_03_20.webp" alt="Universal Memory Stack AI Logo">
+                <h1>Universal Memory Stack AI</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="html/Updated Enable You Ecosystem Website with SEO Optimized Sci-Fi AI Names.html">Ecosystem</a></li>
+                    <li><a href="#">White Papers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Empowering AI with Nature and Technology</h2>
+            <p>Join the future of AI, where personal memory meets universal insights.</p>
+            <div class="cta-container">
+                <a href="html/UMS White Paper.html" class="cta">UMS White Paper Draft</a>
+                <a href="infographics/Architecture_Diagram_V1.svg" class="cta">Architecture Diagram</a>
+                <a href="infographics/Improved QHAI Architecture Mermaid Diagram.svg" class="cta">QHAI Mermaid Diagram</a>
+                <a href="infographics/Improved QHAI Architecture SVG Diagram for Technology Poster.svg" class="cta">QHAI SVG <i class="fas fa-project-diagram"></i></a>
+                <a href="infographics/Schematic_Diagram_V1.jpg" class="cta">Schematic 1v3</a>
+                <a href="infographics/Universal Memory Stack (UMS)-Colored_V2.png" class="cta">MindMap UMS v4</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <img src="graphics/mascot-opt-4.webp" alt="Feature 1 - Documents">
+                    <h3>Documents</h3>
+                    <p>Access our comprehensive documentation and white papers.</p>
+                    <a href="docs/Artificial Intelligence Large Action Models.docx" class="cta" target="_blank">Large Action Models</a>
+                    <a href="docs/NOVEL_QHAI_FRAMEWORK-WhitePaper_V1.docx" class="cta" target="_blank">Novel QHAI Framework</a>
+                    <a href="docs/POSSIBLE IMPROVEMENTS FOR NOVEL QHAI FRAMEWORK.docx" class="cta" target="_blank">QHAI Improvements</a>
+                </div>
+                <div class="feature-item">
+                    <img src="graphics/mascot-opt-2.webp" alt="Feature 2 - Financial Insights">
+                    <h3>Financial Insights</h3>
+                    <p>Comprehensive financial insights and blockchain monetization.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="graphics/mascot-opt-3.webp" alt="Feature 3 - Lifestyle Insights">
+                    <h3>Lifestyle Insights</h3>
+                    <p>Smart data integration for enhanced lifestyle recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mascot">
+        <div class="container">
+            <div class="mascot-grid">
+                <div class="mascot-item">
+                    <img src="graphics/mascot-option-7.webp" alt="EnableYouAi - NovaPortal">
+                    <h3>EnableYouAi - NovaPortal</h3>
+                    <p>Your World, Your Way</p>
+                    <a href="html/Updated Enable You Ecosystem Website with SEO Optimized Sci-Fi AI Names.html" class="cta" target="_blank">Explore Ecosystem</a>
+                </div>
+                <div class="mascot-item">
+                    <img src="graphics/cartersci-ai-prototype1.webp" alt="Cell Journey Ai">
+                    <h3>Cell Journey Ai</h3>
+                    <p>Accelerating Lab to Life</p>
+                    <a href="html/celljourney-landing-from-ums.html" class="cta" target="_blank">Discover CellJourneyAi</a>
+                </div>
+                <div class="mascot-item">
+                    <img src="graphics/5why-ai-guy.png" alt="5Why-Ai">
+                    <h3>5Why-Ai</h3>
+                    <p>NovaContinuum eLearnings</p>
+                    <a href="html/5why-landing-from-ums.html" class="cta" target="_blank">GraphicVisual Learnings</a>
+                </div>
+                <div class="mascot-item">
+                    <img src="graphics/option-9.webp" alt="Dynamic Roots">
+                    <h3>Dynamic Roots</h3>
+                    <p>Advocacy + Tools</p>
+                    <a href="html/dynamic-roots-fern-landing-page.html" class="cta" target="_blank">Modern Family Enablement</a>
+            
+                </div>
+                <div class="mascot-item">
+                    <img src="graphics/option-9.webp" alt="Lucky Fig">
+                    <h3>Lucky Fig</h3>
+                    <p>EComm - DropShipping</p>
+                    <a href="html/lucky-fig-ai-landing-page.html" class="cta" target="_blank">Lucky Fig Hub</a>
+                </div>
+                <div class="mascot-item">
+                    <img src="graphics/lucky-fig-creations-logo.webp" alt="Lucky Fig Creations">
+                    <h3>Lucky Fig Creations</h3>
+                    <p>Etsy - Digital Graphics and Art</p>
+                    <a href="html/lucky-fig-creations-landing-page.html" class="cta" target="_blank">Lucky Fig Creations Hub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="graphics/lj-global-solutions-logo.webp" alt="L&J Global Solutions Logo" width="100">
+                    <h3>L&J Global Solutions</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p>&copy; 2024 L&J Global Solutions. All rights reserved.</p>
+                <p>Universal Memory Stack AI and all associated products and services are proprietary technologies of L&J Global Solutions.</p>
+                <p>Unauthorized use, reproduction, or distribution is strictly prohibited.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
+
+              
